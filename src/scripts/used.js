@@ -25,5 +25,20 @@ function _debounce(fn, wait) {
     }
 }
 
-export { debounce, _debounce };
+//  节流函数
+
+function throttle(fn, gapTime) {
+    let _lastTime = null;
+
+    return function () {
+        let _nowTime = + new Date()
+        if (_nowTime - _lastTime > gapTime || !_lastTime) {
+            fn();
+            _lastTime = _nowTime
+        }
+    }
+}
+
+
+export { debounce, _debounce, throttle };
 

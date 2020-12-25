@@ -4,6 +4,7 @@
 .idea
 /node_modules
 /.pnp
+/.eslintcache
 .pnp.js
 
 # testing
